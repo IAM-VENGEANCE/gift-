@@ -3,7 +3,7 @@
 
 ## Overview
 
-Welcome to the Gift Recommendation Website repository! This collaborative project, crafted by @Yashvisharma1204, Punit Kumar, and Hardik Choudhary, is a delightful platform designed to assist users in finding the perfect gift recommendations. Leveraging HTML, CSS, and JavaScript, we aimed to create a visually pleasing and interactive experience for users.
+Welcome to the Gift Recommendation Website repository! This collaborative project, crafted by Pratik Deokar, Om Patil, and Harshwardhan, is a delightful platform designed to assist users in finding the perfect gift recommendations. Leveraging HTML, CSS, and JavaScript, we aimed to create a visually pleasing and interactive experience for users.
 
 ## Project Highlights
 
