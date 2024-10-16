@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Present</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Perfect Present</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="login.html">Sign Up</a></li>
+                <li><a href="#">Gift Finder</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <h1>Welcome to Perfect Present</h1>
+        <p>Your one-stop shop for finding the perfect gift!</p>
+        <img src="gift-box.png" alt="Gift Box">
+    </section>
+
+    <section class="filters">
+        <h2>Find the Perfect Gift</h2>
+        <form id="filter-form">
+            <!-- Add filters for recipient -->
+            <label for="recipient">Who is the gift for?</label>
+            <select id="recipient">
+                <option value="mom">Mom</option>
+                <option value="dad">Dad</option>
+                <option value="son">Son</option>
+                <option value="daughter">Daughter</option>
+                <option value="friend">Friend</option>
+                <option value="coworker">Coworker</option>
+            </select>
+
+            <!-- Add filters for interests -->
+            <label for="interest">What are their interests?</label>
+            <select id="interest">
+                <option value="tech">Tech</option>
+                <option value="hobbies">Hobbies</option>
+                <option value="fashion">Fashion</option>
+                <option value="food">Food</option>
+                <option value="art">Art</option>
+                <option value="sports">Sports</option>
+            </select>
+
+            <!-- Add filters for budget -->
+            <label for="budget">Budget Range:</label>
+            <select id="budget">
+                <option value="low">Under ₹500</option>
+                <option value="mid">₹500 - ₹2000</option>
+                <option value="high">Above ₹2000</option>
+            </select>
+
+            <button type="submit">Find Gifts</button>
+        </form>
+    </section>
+
+    <script src="home.js"></script>
+</body>
+</html>

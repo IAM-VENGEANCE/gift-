@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="cont.css">
+    <title>Home Page</title>
+    <script>
+        let selectedPage = '';                                                                                                                                                                                                                                                                          
+
+        function selectOption(page) {
+            selectedPage = page; // Store the selected page
+            // Remove the 'selected' class from all options
+            const options = document.querySelectorAll('.gift-option');
+            options.forEach(option => option.classList.remove('selected'));
+
+            // Add the 'selected' class to the currently selected option
+            document.getElementById(page).classList.add('selected');
+        }
+
+        function redirectToSelectedPage() {
+            if (selectedPage) {
+                // Redirect to the selected page
+                window.location.href = selectedPage;
+            } else {
+                alert("Please select an option.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="line">
+        <div class="top-nav">
+            <a href="login.html">Sign Up</a>
+            <a href="index.html">Home</a>
+            <a href="home.html"><u>Gift Finder</u></a>
+            <h1 style="transform:translate(40%,40%); font-family:monospace;"><img src="gift-box.png" width="50px" style="transform:translate(10%,10%);"> Perfect Present</h1> 
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="box">
+            <h1 style="color:#944ee3">Gift Finder</h1>
+            <h2>Who are you looking for?</h2>
+            <form id="gift-form" onsubmit="return false;">
+                <label for="recipient">I am looking for a gift for:</label>
+                <select id="recipient" name="recipient" required>
+                    <option value="">Select Recipient</option>
+                    <option value="mom.html">Mom</option>
+                    <option value="dad.html">Dad</option>
+                    <option value="fri.html">Friend</option>
+                    <option value="son.html">Son</option>
+                    <option value="dau.html">Daughter</option>
+                    <option value="co.html">Co-worker</option>
+                </select>
+
+                <label for="gift-type">Type of Gift:</label>
+                <select id="gift-type" name="gift-type">
+                    <option value="">Select Type</option>
+                    <option value="fashionista">For the Fashionista</option>
+                    <option value="pampered">For the Pampered</option>
+                    <option value="tech-savvy">For the Tech Savvy</option>
+                    <option value="creative">For the Creative</option>
+                    <option value="hobbyist">For the Hobbyist</option>
+                    <option value="outdoorsy">For the Outdoorsy</option>
+                </select>
+
+                <label for="price">Price Range (in Rs):</label>
+                <div><input style="padding: 15px;" type="range" id="price" name="price" min="0" max="20000" value="5000"  step="500">
+                </div>
+
+                <!-- <input type="range" id="price" name="price" min="0" max="20000" value="5000" id = "sldr"  step="500">
+                 --><p id="price-value">Price: ₹<span>5000</span></p>
+
+                <button type="button" onclick="findGift()">Find Gift</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Price slider functionality
+        const priceSlider = document.getElementById('price');
+        const priceValue = document.getElementById('price-value').querySelector('span');
+
+        priceSlider.oninput = function () {
+            priceValue.textContent = this.value; // Update displayed price value
+        };
+
+        // Find Gift button functionality
+        function findGift() {
+            const recipientDropdown = document.getElementById('recipient');
+            const selectedValue = recipientDropdown.value;
+
+            if (selectedValue) {
+                window.location.href = selectedValue; // Redirect to selected recipient page
+            } else {
+                alert('Please select a recipient first!'); // Alert if no recipient selected
+            }
+        }
+    </script>
+</body>
+</html>

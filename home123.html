@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Home Page</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Playfair Display', serif; /* Classic, elegant font */
+            background-color: #f9f9f9; /* Soft background color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap'); /* Importing the classic font */
+
+        /* Navigation Bar Styling */
+        .line {
+            background-color: #4CAF50; /* Green color for the navbar */
+            width: 100%;
+            padding: 10px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 1200px; /* Max width to center align content */
+            margin: 0 auto; /* Centering */
+            color: white;
+        }
+
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 18px;
+            transition: color 0.3s ease; /* Smooth color change */
+        }
+
+        .top-nav a:hover {
+            color: #ffeb3b; /* Change color on hover */
+        }
+
+        .top-nav h1 {
+            font-size: 28px;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Container Styling */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh; /* Occupying height */
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 90%; /* Full width for small devices */
+            max-width: 500px; /* Limiting max width */
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 30px; /* Heading size */
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            color: #4CAF50; /* Consistent color with navbar */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            font-size: 18px; /* Increased label size */
+            color: #333; /* Darker label color */
+        }
+
+        select,
+        .slider {
+            width: 100%; /* Full width */
+            padding: 12px; /* Padding for elements */
+            border-radius: 6px; /* Rounded corners */
+            border: 1px solid #ccc; /* Light border */
+            margin-bottom: 15px; /* Spacing */
+            font-size: 16px; /* Font size for inputs */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        button {
+            background-color: #4CAF50; /* Green button color */
+            color: white; /* White text */
+            border: none; /* No border */
+            border-radius: 6px; /* Rounded corners */
+            padding: 12px; /* Button padding */
+            cursor: pointer; /* Pointer cursor */
+            font-size: 18px; /* Button text size */
+            width: 100%; /* Full width */
+            font-family: 'Playfair Display', serif; /* Same font for consistency */
+            transition: background-color 0.3s ease; /* Smooth color change */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        /* Price Slider Styling */
+        #price-value {
+            font-size: 18px; /* Font size for price display */
+            margin-top: 10px; /* Spacing */
+            color: #333; /* Darker color */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .top-nav {
+                flex-direction: column; /* Stack items vertically */
+                padding: 10px;
+            }
+
+            .top-nav a {
+                padding: 5px;
+                font-size: 16px; /* Reduced font size */
+            }
+
+            .top-nav h1 {
+                font-size: 24px; /* Smaller title size */
+                text-align: center; /* Center align */
+            }
+
+            .container {
+                height: auto; /* Allow height to adjust */
+                padding: 20px;
+            }
+
+            .box {
+                width: 100%; /* Full width on small devices */
+                padding: 20px; /* Reduced padding */
+            }
+
+            h1 {
+                font-size: 26px; /* Smaller heading size */
+            }
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 22px; /* Further reduced size */
+            }
+
+            label,
+            button,
+            select {
+                font-size: 14px; /* Smaller font size for buttons and inputs */
+            }
+
+            .top-nav h1 {
+                font-size: 20px; /* Smaller title size */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="line">
+        <div class="top-nav">
+            <a href="login.html">Sign Up</a>
+            <a href="index.html">Home</a>
+            <a href="home.html"><u>Gift Finder</u></a>
+            <h1>
+                <img src="gift-box.png" width="40px" style="vertical-align: middle;"> Perfect Present
+            </h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <h1>Gift Finder</h1>
+            <p>Who are you looking for?</p>
+            <form id="gift-form" onsubmit="return false;">
+                <label for="recipient">I am looking for a gift for:</label>
+                <select id="recipient" name="recipient" required>
+                    <option value="">Select Recipient</option>
+                    <option value="mom.html">Mom</option>
+                    <option value="dad.html">Dad</option>
+                    <option value="fri.html">Friend</option>
+                    <option value="son.html">Son</option>
+                    <option value="dau.html">Daughter</option>
+                    <option value="co.html">Co-worker</option>
+                </select>
+
+                <label for="gift-type">Type of Gift:</label>
+                <select id="gift-type" name="gift-type">
+                    <option value="">Select Type</option>
+                    <option value="fashionista">For the Fashionista</option>
+                    <option value="pampered">For the Pampered</option>
+                    <option value="tech-savvy">For the Tech Savvy</option>
+                    <option value="creative">For the Creative</option>
+                    <option value="hobbyist">For the Hobbyist</option>
+                    <option value="outdoorsy">For the Outdoorsy</option>
+                </select>
+
+                <label for="price">Price Range (in Rs):</label>
+                <input type="range" id="price" name="price" min="0" max="10000" value="5000" class="slider" step="500">
+                <p id="price-value">Price: ₹<span>5000</span></p>
+
+                <button type="button" onclick="findGift()">Find Gift</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Price slider functionality
+        const priceSlider = document.getElementById('price');
+        const priceValue = document.getElementById('price-value').querySelector('span');
+
+        priceSlider.oninput = function () {
+            priceValue.textContent = this.value; // Update displayed price value
+        };
+
+        // Find Gift button functionality
+        function findGift() {
+            const recipientDropdown = document.getElementById('recipient');
+            const selectedValue = recipientDropdown.value;
+
+            if (selectedValue) {
+                window.location.href = selectedValue; // Redirect to selected recipient page
+            } else {
+                alert('Please select a recipient first!'); // Alert if no recipient selected
+            }
+        }
+    </script>
+</body>
+
+</html>

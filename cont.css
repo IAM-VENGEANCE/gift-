@@ -1,0 +1,83 @@
+        /* Container Styling */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh; /* Occupying height */
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #price {
+            width: 92%; /* Full width *
+            padding: 8px; /* Padding for elements */
+            border-radius: 6px; /* Rounded corners */
+            border: 1px solid #ccc; /* Light border */
+            margin-bottom: 15px; /* Spacing */
+            font-size: 16px; /* Font size for inputs */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 90%; /* Full width for small devices */
+            max-width: 500px; /* Limiting max width */
+            text-align: center;
+            margin-top: 125px;
+        }
+
+        h1 {
+            font-size: 30px; /* Heading size */
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            color: #f485fa; /* Consistent color with navbar */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            font-size: 18px; /* Increased label size */
+            color: #333; /* Darker label color */
+        }
+        
+        select,
+        .slider {
+            width: 100%; /* Full width */
+            padding: 12px; /* Padding for elements */
+            border-radius: 6px; /* Rounded corners */
+            border: 1px solid #ccc; /* Light border */
+            margin-bottom: 15px; /* Spacing */
+            font-size: 16px; /* Font size for inputs */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        button {
+            background-color: #4CAF50; /* Green button color */
+            color: white; /* White text */
+            border: none; /* No border */
+            border-radius: 6px; /* Rounded corners */
+            padding: 12px; /* Button padding */
+            cursor: pointer; /* Pointer cursor */
+            font-size: 18px; /* Button text size */
+            width: 100%; /* Full width */
+            font-family: 'Playfair Display', serif; /* Same font for consistency */
+            transition: background-color 0.3s ease; /* Smooth color change */
+        }
+
+        button:hover {
+            background-color:  #f485fa; /* Darker green on hover */
+        }
+
+        /* Price Slider Styling */
+        #price-value {
+            font-size: 18px; /* Font size for price display */
+            margin-top: 10px; /* Spacing */
+            color: #333; /* Darker color */
+        }
+

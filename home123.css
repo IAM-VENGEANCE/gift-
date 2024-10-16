@@ -1,0 +1,127 @@
+/* Keep the existing navbar styling */
+.line {
+    background-color: #4CAF50;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.top-nav a:hover {
+    color: #ffeb3b;
+}
+
+.top-nav h1 {
+    font-size: 28px;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Style for the container and box (copied from home23.html) */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.box {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    color: #4CAF50;
+}
+
+/* Slider Styling */
+.slider {
+    width: 100%;
+    padding: 16px 12px; /* Add padding for better visual appearance */
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#price-value {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .top-nav a {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .top-nav h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .container {
+        height: auto;
+        padding: 20px;
+    }
+
+    .box {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    label,
+    button,
+    select {
+        font-size: 14px;
+    }
+
+    .top-nav h1 {
+        font-size: 20px;
+    }
+}

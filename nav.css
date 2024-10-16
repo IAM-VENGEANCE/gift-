@@ -1,0 +1,90 @@
+.line{
+    height:10px;
+    border-top: 10px solid;
+    border-image:   linear-gradient(to right, #9afb95 20%,#7ffab1 25%,#4fe4f8 25%, #4facf8 50%,#4f7af8 50%,#a274fa 25%,#da98fb 25%, #f485fa 25% ) 8;
+}
+.top-nav{
+    overflow: hidden;
+    background-color: #ffffff;
+    font-weight: bold;
+    width:100%;
+    height:120px;
+    position:sticky;
+}
+.top-nav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 40px;
+    text-decoration: none;
+    font-size: 17px;
+    float: right;
+}
+  
+.top-nav a:hover[href="home.html"] {
+    background-color: transparent;
+    color: #f485fa;
+    
+}
+.top-nav a:hover[href="wishlist.html"] {
+    background-color: transparent;
+    color: #4f7af8;
+}
+.top-nav a:hover[href="login.html"] {
+    background-color: transparent;
+    color: #4fe4f8;
+}
+.top-nav a[href="index.html"]{
+    float:inline-end;
+    position:absolute;
+}
+.top-nav a:hover[href="index.html"] {
+    background-color: transparent;
+    color: indianred;
+}
+
+
+
+
+
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px;
+    }
+
+    .top-nav a {
+        padding: 5px;
+        font-size: 16px; /* Reduced font size */
+    }
+
+    .top-nav h1 {
+        font-size: 24px; /* Smaller title size */
+        text-align: center; /* Center align */
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 22px; /* Further reduced size */
+    }
+
+    label,
+    button,
+    select {
+        font-size: 14px; /* Smaller font size for buttons and inputs */
+    }
+
+    .top-nav h1 {
+        font-size: 20px; /* Smaller title size */
+    }
+}
+
+
+
+
+
+
+
